@@ -9,4 +9,5 @@
  */
 
 module.exports.routes = {
+  'GET /': 'home/index'
 };
