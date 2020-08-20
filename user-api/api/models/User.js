@@ -56,5 +56,12 @@ module.exports = {
   customToJSON: function() {
     return _.omit(this, ['password']);
   },
+  beforeCreate: async function(values, proceed) {
+    const hashedPassword = await sails.helpers.passwords.hashPassword(
+      values.password
+    );
+    values.password = hashedPassword;
+    return proceed();
+  }
 
 };
