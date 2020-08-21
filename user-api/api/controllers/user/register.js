@@ -18,13 +18,20 @@ module.exports = {
       minLength: 6
     }
   },
-  exits: {},
+  exits: {
+    success: {
+      statusCode: 201,
+      description: 'New user created.'
+    },
+    emailAlreadyInUse: {
+      statusCode: 400,
+      description: 'Email address already in use.'
+    },
+    error: {
+      description: 'An error occurred.'
+    },
+  },
   fn: async function(inputs) {
-
-    // All done.
     return;
-
   }
-
-
 };
