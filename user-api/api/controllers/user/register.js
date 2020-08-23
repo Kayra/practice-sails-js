@@ -50,7 +50,7 @@ module.exports = {
       console.log('Confirmation link: ', confirmLink);
 
       return exits.success({
-        message: `An account has been created for ${newUser.email} successfully. Visit the confirmation link to verify.`,
+        message: `An account has been created for ${newUser.email} successfully. Visit the confirmation link to verify: ${confirmLink}`,
       });
 
     } catch (error) {

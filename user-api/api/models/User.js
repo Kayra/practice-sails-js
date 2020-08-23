@@ -25,15 +25,15 @@ module.exports = {
       defaultsTo: 'unconfirmed',
       columnName: 'email_status'
     },
-    emailProofToken: {
+    accountProofToken: {
       type: 'string',
-      description: 'This will be used in the account verification email',
-      columnName: 'email_proof_token'
+      description: 'This will be used to verify the user account',
+      columnName: 'account_proof_token'
     },
-    emailProofTokenExpiresAt: {
+    accountProofTokenExpiresAt: {
       type: 'number',
-      description: 'time in milliseconds representing when the emailProofToken will expire',
-      columnName: 'email_proof_token_expires_at'
+      description: 'time in milliseconds representing when the accountProofToken will expire',
+      columnName: 'account_proof_token_expires_at'
     },
     password: {
       type: 'string',
