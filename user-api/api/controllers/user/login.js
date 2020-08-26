@@ -56,14 +56,15 @@ module.exports = {
 
     } catch (error) {
 
-      sails.log.error(error);
-
       if (error.isOperational) {
         return exits.operationalError({
           message: `Error logging in user ${inputs.email}`,
           error: error.raw,
         });
       }
+
+      sails.log.error(error);
+
       return exits.error({
         message: `Error logging in user ${inputs.email}`,
         error: error.message,

@@ -16,7 +16,7 @@ module.exports = {
         'Email matched a user and a recovery email might have been sent',
     },
   },
-  fn: async function(inputs) {
+  fn: async function(inputs, exits) {
 
     var user = await User.findOne({ email: inputs.email });
     if (!user) { return; }
@@ -32,7 +32,7 @@ module.exports = {
     const recoveryLink = `${sails.config.custom.baseUrl}/user/reset-password?token=${token}`;
 
     return exits.success({
-      message: `Password reset process has been initiated for ${newUser.email}. Visit the link to reset the password: ${recoveryLink}`,
+      message: `Password reset process has been initiated for ${user.email}. Visit the link to reset the password: ${recoveryLink}`,
     });
   }
 };
