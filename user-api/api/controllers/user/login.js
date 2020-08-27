@@ -39,10 +39,7 @@ module.exports = {
       }
 
       await sails.helpers.passwords
-        .checkPassword(inputs.password, user.password)
-        .intercept('incorrect', (error) => {
-          exits.passwordMismatch({ error: error.message });
-        });
+        .checkPassword(inputs.password, user.password);
 
       const token = await sails.helpers.generateNewJwtToken(user.email);
 
@@ -61,15 +58,13 @@ module.exports = {
           message: `Error logging in user ${inputs.email}`,
           error: error.raw,
         });
+      } else {
+        /* sails.log.error(error); */
+        return exits.error({
+          message: `Error logging in user ${inputs.email}`,
+          error: error.message,
+        });
       }
-
-      sails.log.error(error);
-
-      return exits.error({
-        message: `Error logging in user ${inputs.email}`,
-        error: error.message,
-      });
-
     }
   }
 };
