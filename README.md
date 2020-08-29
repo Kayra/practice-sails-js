@@ -36,7 +36,7 @@ sails lift
 
 ## Api Requests
 
-**If you're using the [insomnia rest client](https://insomnia.rest/), be sure to import the [insomnia project](https://github.com/Kayra/practice-node-pg/blob/master/docs/practice-sails-insomnia_2022-12-28.json).**
+**If you're using the [insomnia rest client](https://insomnia.rest/), be sure to import the [insomnia project](https://github.com/Kayra/practice-sails-js/blob/main/docs/practice-sails-insomnia_2022-12-28.json).**
 
 ### **GET** Index`/`
 
