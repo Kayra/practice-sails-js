@@ -76,7 +76,7 @@ Example response:
 }
 ```
 
-## **GET** User Confirm `/user/confirm?token=<generated_token>`
+### **GET** User Confirm `/user/confirm?token=<generated_token>`
 
 Example request:
 
@@ -93,7 +93,7 @@ Example response:
 }
 ```
 
-## **POST** User Log In `/user/login`
+### **POST** User Log In `/user/login`
 
 Example request:
 
@@ -126,7 +126,7 @@ Example response:
 }
 ```
 
-## **POST** User Forgot Password `/user/forgot-password`
+### **POST** User Forgot Password `/user/forgot-password`
 
 Example request:
 
@@ -145,7 +145,7 @@ Example response:
 }
 ```
 
-## **POST** User Reset Password `/user/reset-password?token=<generated_token>`
+### **POST** User Reset Password `/user/reset-password?token=<generated_token>`
 
 Example request:
 
